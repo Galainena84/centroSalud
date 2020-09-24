@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6967a6c-502b-4e8a-ba6d-974f5e9a4d85" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hyINC2xZDwEviiBW8ZVCuj360i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.Persona">
+    <configuration name="Agenda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProyectoCS.Agenda" />
+      <module name="centroSalud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProyectoCS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Persona" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProyectoCS.Persona" />
+      <module name="centroSalud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProyectoCS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="centroSalud" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="centroSalud" />
+      <shortenClasspath name="MANIFEST" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.centroSalud" />
+      <item itemvalue="Application.Agenda" />
+      <item itemvalue="Application.Persona" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Persona" />
+        <item itemvalue="Application.Agenda" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6967a6c-502b-4e8a-ba6d-974f5e9a4d85" name="Default Changelist" comment="" />
+      <created>1600976864058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600976864058</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600977083621">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="14" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1600977083621" />
+    <state x="412" y="161" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600977075597">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="161" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1600977075597" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1600977320113">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600977320113" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1600977320113">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600977320113" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1600977320113">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600977320113" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1600977320113">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600977320113" />
+  </component>
+</project>
