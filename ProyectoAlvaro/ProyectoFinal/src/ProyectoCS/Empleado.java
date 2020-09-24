@@ -65,18 +65,18 @@ public class Empleado {
 	            	j++;
 	            	person.setClave(srs.getString(j));
 	            	j++;
-	                person.setCorreo(srs.getString(j));	                
+	                person.setCorreo(srs.getString(j));	
 	                
-	                personlist.add(person);
+	                BDEmpleado person1 = new BDEmpleado(person.getUsuario(), person.getClave(), person.getCorreo());
+	                
+	                personlist.add(person1);
 	            }
 
 
 	 for(var i = 0; i < personlist.size() ; i++) {
 		 System.out.println(personlist.size());
-		 System.out.println(((BDEmpleado) personlist.get(i)).getUsuario());
-		 i++;
-		 System.out.println(((BDEmpleado) personlist.get(i)).getClave());
-		 i++;
+		 System.out.println(((BDEmpleado) personlist.get(i)).getUsuario());	
+		 System.out.println(((BDEmpleado) personlist.get(i)).getClave());		 
 		 System.out.println(((BDEmpleado) personlist.get(i)).getCorreo());
 	 }
 	       
