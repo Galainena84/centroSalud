@@ -7,6 +7,8 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
 import javax.swing.*;
+import javax.swing.text.JTextComponent;
+
 
 public class GUInuevo {
 
@@ -24,9 +26,7 @@ class GUIcompleto extends JFrame {
 		setBounds(300, 300, 330, 150);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-		Toolkit misistema = Toolkit.getDefaultToolkit();
-		Image miicono = misistema.getImage("centro_sanitario.png");
-		setIconImage(miicono);
+		this.setIconImage(new ImageIcon(getClass().getResource("/ProyectoCS/imagen centro de salud.png")).getImage());
 
 		GUILamina Gpanel = new GUILamina();
 		add(Gpanel);
@@ -90,12 +90,14 @@ class GUILamina extends JPanel implements ActionListener {
 
 		if (objeto == cancelar)
 			JOptionPane.showMessageDialog(null, "Gracias por visitarnos");
+			System.exit(WIDTH);
 
 		if (objeto == aceptar) {
 			// TODO jframe de Agenda cuando este implementado
+			
+	
 		}
 	}
-
 	private void setIconImage(Image miicono) {
 		// TODO Auto-generated method stub
 	}

@@ -11,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import javax.swing.AbstractButton;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -19,7 +21,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-
 
 public class Agenda extends JFrame {
 
@@ -34,7 +35,6 @@ public class Agenda extends JFrame {
 	 * después en diferentes eventos y funciones. Dichas variables son los cuadros
 	 * de text, y el desplegable
 	 */
-
 	ArrayList listaPersonas = new ArrayList();
 	String fichero = null;
 	JComboBox personas1 = new JComboBox();
@@ -59,17 +59,20 @@ public class Agenda extends JFrame {
 	 */
 
 	public Agenda(String fich) {
+
 		/*
 		 * definiremos un tamaño y una linea, para hacer que se cierre la ventana cuando
 		 * pulsemos el botón de cerrar
 		 */
 
-		setSize(400, 300);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(450, 350);
+	    
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setIconImage(new ImageIcon(getClass().getResource("/ProyectoCS/imagen centro de salud.png")).getImage());
+		
 
-		Toolkit misistema = Toolkit.getDefaultToolkit();
-		Image miicono = misistema.getImage("centro_sanitario.png");
-		setIconImage(miicono);
+		setVisible(true);
 
 		// controles para definir 3 zonas: Norte Centro y Sur.
 
@@ -79,7 +82,7 @@ public class Agenda extends JFrame {
 		 */
 
 		JPanel panelSup = new JPanel();
-		panelSup.setLayout(new GridLayout(1, 1));
+		panelSup.setLayout(new GridLayout(1, 1, 2, 2));
 		panelSup.add(personas1);
 
 		/*
@@ -89,19 +92,19 @@ public class Agenda extends JFrame {
 		 */
 
 		JPanel panelCen = new JPanel();
-		panelCen.setLayout(new GridLayout(5, 2));
+		panelCen.setLayout(new GridLayout(6, 2, 2, 2));
 
-		panelCen.add(new JLabel("DNI:"));
+		panelCen.add(new JLabel("    DNI:"));
 		panelCen.add(txtdni);
-		panelCen.add(new JLabel("Nombre:"));
+		panelCen.add(new JLabel("    Nombre:"));
 		panelCen.add(txtNombre);
-		panelCen.add(new JLabel("Apellido 1:"));
+		panelCen.add(new JLabel("    Apellido 1:"));
 		panelCen.add(txtApellido1);
-		panelCen.add(new JLabel("Apellido 2:"));
+		panelCen.add(new JLabel("    Apellido 2:"));
 		panelCen.add(txtApellido2);
-		panelCen.add(new JLabel("Direccion:"));
+		panelCen.add(new JLabel("    Direccion:"));
 		panelCen.add(txtDireccion);
-		panelCen.add(new JLabel("Telefono:"));
+		panelCen.add(new JLabel("    Telefono:"));
 		panelCen.add(txtTelefono);
 
 		/*
@@ -109,7 +112,7 @@ public class Agenda extends JFrame {
 		 * columnas, donde poner todos los botones que hemos visto
 		 */
 		JPanel panelInf = new JPanel();
-		panelInf.setLayout(new GridLayout(2, 3));
+		panelInf.setLayout(new GridLayout(2, 3, 2, 2));
 
 		JButton btnVer = new JButton("Ver Datos");
 		JButton btnGuardar = new JButton("Modificar Datos");
@@ -145,7 +148,7 @@ public class Agenda extends JFrame {
 		// llamar a este método tras cargar por primera vez las personas del fichero
 
 		listaPersonas = ProyectoCS.LeeGuardaPersona.leePersonas(fichero);
-		actualizaLista();
+	
 
 		// LOS EVENTOS
 
@@ -162,12 +165,12 @@ public class Agenda extends JFrame {
 
 				// Actualizar los cuadros de texto con el dato correspondiente de la persona
 				// seleccionada
-				txtdni.setText(p.getdni());
+				txtdni.setText(Integer.toString(p.getdni()));
 				txtNombre.setText(p.getNombre());
 				txtApellido1.setText(p.getApellido1());
 				txtApellido2.setText(p.getApellido2());
 				txtDireccion.setText(p.getDireccion());
-				txtTelefono.setText(p.getTelefono());
+				txtTelefono.setText(Integer.toString(p.getTelefono()));
 			}
 		});
 
@@ -175,8 +178,8 @@ public class Agenda extends JFrame {
 
 		btnAnadir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Persona p = new Persona(txtdni.getText(), txtNombre.getText(), txtApellido1.getText(),
-						txtApellido2.getText(), txtDireccion.getText(), txtTelefono.getText());
+				Persona p = new Persona(Integer.parseInt(txtdni.getText()), txtNombre.getText(), txtApellido1.getText(),
+						txtApellido2.getText(), txtDireccion.getText(), Integer.parseInt(txtTelefono.getText()));
 				listaPersonas.add(p);
 				actualizaLista();
 				borraCampos();
@@ -200,12 +203,12 @@ public class Agenda extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int indice = buscaPersona();
 				Persona p = (Persona) (listaPersonas.get(indice));
-				p.setdni(txtdni.getText());
+				p.setdni(Integer.parseInt(txtdni.getText()));
 				p.setNombre(txtNombre.getText());
 				p.setApellido1(txtApellido1.getText());
 				p.setApellido2(txtApellido2.getText());
 				p.setDireccion(txtDireccion.getText());
-				p.setTelefono(txtTelefono.getText());
+				p.setTelefono(Integer.parseInt(txtTelefono.getText()));
 				actualizaLista();
 				borraCampos();
 			}
@@ -254,21 +257,14 @@ public class Agenda extends JFrame {
 	// b) Borrar todos los cuadros de texto
 
 	private void borraCampos() {
-		// Rellena esto como creas conveniente
-	}
 
-	class GUIcompleto extends JFrame {
-
-		public GUIcompleto() {
-
-			setSize(400, 300);
-			
-			Toolkit misistema = Toolkit.getDefaultToolkit();
-			Image miicono = misistema.getImage("centro_sanitario.png");
-			setIconImage(miicono);
-
-			setVisible(true);
-		}// Fin de la clase GUIcompleto
+			// Rellena esto como creas conveniente
+			txtdni.setText("");
+			txtNombre.setText("");
+			txtApellido1.setText("");
+			txtApellido2.setText("");
+			txtDireccion.setText("");
+			txtTelefono.setText("");
 	}
 
 }
