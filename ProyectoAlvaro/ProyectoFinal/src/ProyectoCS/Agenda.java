@@ -144,10 +144,6 @@ public class Agenda extends JFrame {
 
 		fichero = fich;
 		listaPersonas = ProyectoCS.LeeGuardaPersona.leePersonas(fichero);
-
-		// llamar a este método tras cargar por primera vez las personas del fichero
-
-		listaPersonas = ProyectoCS.LeeGuardaPersona.leePersonas(fichero);
 	
 
 		// LOS EVENTOS

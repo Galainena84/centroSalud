@@ -59,6 +59,7 @@ public class Empleado {
 	            var j=0;
 	            
 	            while (srs.next()) {
+	            	ArrayList lista = new ArrayList();
 	            	BDEmpleado person = new BDEmpleado(usuario,clave,correo);
 	            	j=1;	            	
 	            	person.setUsuario(srs.getString(j));
@@ -67,7 +68,7 @@ public class Empleado {
 	            	j++;
 	                person.setCorreo(srs.getString(j));	
 	                
-	                BDEmpleado person1 = new BDEmpleado(person.getUsuario(), person.getClave(), person.getCorreo());
+	                BDEmpleado person1 = new BDEmpleado(person.getUsuario(), person.getClave(), person.getCorreo());                
 	                
 	                personlist.add(person1);
 	            }
